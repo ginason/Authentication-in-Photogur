@@ -1,0 +1,22 @@
+<h1>Photogur</h1>
+<%= link_to 'New User', new_users_path %>  |
+<%= link_to 'Login', root_path %> |
+<%= link_to 'Logout', root_path %>
+
+<h1>Most recent Pictures</h1>
+
+<ul>
+  <% @most_recent_pictures.each do |picture| %>
+    <li><%= picture.title %></li>
+    <%= image_tag picture.url, size:300%>
+    <% end %>
+</ul>
+===================================================
+
+<ul>
+  <% @pictures_created_in_year.each do |picture| %>
+  <h3><%= picture.created_at.year %></h3><br>
+  <li><%= picture.title %></li>
+  <%= image_tag picture.url, size:200 %>
+  <% end %>
+</ul>
