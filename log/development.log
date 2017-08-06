@@ -12063,3 +12063,238 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/users" for ::1 at 2017-08-06 17:28:49 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kpb/3Z0W7zVprbDmxG5CZVLw1ftsHZ5GOuYE3KTT7kV6XL+G4Q47j0AnO/6O33NYj9tK+SZBBE+LiUcu81pdmw==", "user"=>{"email"=>"hi@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-06 17:30:04 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at > '2017-01-01 00:00:00' and created_at < '2017-12-31 00:00:00')[0m
+  Rendered pictures/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-06 17:30:05 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-06 17:30:12 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRGpTi/rav0IvY/GU6IEtgMt4otRcV2PRL4OliIWJIVx2+kVU/O+RyE3BN4ZEzWL3gZ9iRstx4b10U1kdZ+XWw==", "user"=>{"email"=>"hey@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2017-08-06 17:38:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ginason/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ginason/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ginason/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [11 times] (3.3ms)
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_ginason__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4474130363518319203_70242064696820 at /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.4ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (134.5ms)
+Started GET "/" for ::1 at 2017-08-06 17:38:41 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at > '2017-01-01 00:00:00' and created_at < '2017-12-31 00:00:00')[0m
+  Rendered pictures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-06 17:38:42 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-06 17:38:47 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OBqi2ymGu8fg1GJFZi03Mi72r/uvTEasbLdvq6sXKFlo0OKAVZ5vfcle6V0snAYP890w+eUQ3KXd2CxZ/J6bhw==", "user"=>{"email"=>"hi@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Sign up!</h1>
+    2: <% if @user.errors.any? %>
+    3: <ul>
+    4:   <% @users.errors.full_messages.each do |msg| %>
+    5:   <li><%= msg %></li>
+    6:   <% end %>
+    7: </ul>
+  
+app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__3325600034125578019_70242045438200'
+app/controllers/users_controller.rb:16:in `create'
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.8ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_ginason__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4474130363518319203_70242064945120 at /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.7ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ginason/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (122.8ms)
+Started GET "/" for ::1 at 2017-08-06 17:39:34 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at > '2017-01-01 00:00:00' and created_at < '2017-12-31 00:00:00')[0m
+  Rendered pictures/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-06 17:39:35 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-06 17:39:42 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lyoI+/0rcEMegYqqXBqaF6ptEvCg+L1d6CYx9E+2VgvH4EiggTOk+TcLAbIWq6sqd0aN8uqkJ1RZSXIGGD/l1Q==", "user"=>{"email"=>"hi@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-08-06 17:41:29 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bj3ZSHr1xz9GgleyJT/J8Yh7CxWM+hGpjBF3GGfIzGxW95kTBu0ThW8I3KpvjvjMVVCUF8ami6A9fjTqMEF/sg==", "user"=>{"email"=>"hi@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hi@email.com"], ["password_digest", "$2a$10$pAEV5McxSdqKuSIyNS1pYu1EmTemRZeeoq6PuhIcCd8NLuCB94uOa"], ["created_at", 2017-08-06 21:41:29 UTC], ["updated_at", 2017-08-06 21:41:29 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-06 17:41:29 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at > '2017-01-01 00:00:00' and created_at < '2017-12-31 00:00:00')[0m
+  Rendered pictures/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-06 17:41:32 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at > '2017-01-01 00:00:00' and created_at < '2017-12-31 00:00:00')[0m
+  Rendered pictures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-06 17:41:35 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at > '2017-01-01 00:00:00' and created_at < '2017-12-31 00:00:00')[0m
+  Rendered pictures/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-06 17:41:36 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-06 17:41:40 -0400
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures" WHERE (created_at > '2017-01-01 00:00:00' and created_at < '2017-12-31 00:00:00')[0m
+  Rendered pictures/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
