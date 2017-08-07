@@ -6,7 +6,21 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+  <h1>Photogur</h1>
+  <%= link_to 'New User', new_users_path %>  |
+  <%= link_to 'Login', root_path %> |
+  <%= link_to 'Logout', root_path %>
+</header>
 <body>
+  <% if flash.any?%>
+  <% flash.each do |key, value|%>
+  <p class ="<%= key %>">
+    <%%>
+  </p>
+  <%end%>
+  <%end%>
+
 
 <%= yield %>
 

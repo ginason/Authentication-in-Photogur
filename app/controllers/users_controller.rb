@@ -11,8 +11,10 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
+      flash[:notice] = 'Account successfully created!'
       redirect_to root_url
     else
+      flash.now[:error] = 'Sorry, try again!'
       render :new
     end
   end
