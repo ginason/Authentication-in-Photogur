@@ -12,7 +12,7 @@
 
   <% if session[:user_id]%>
     Hello User <%= session[:user_id]%>  |
-    <%= link_to 'Logout', root_path %>
+    <%= link_to 'Logout', sessions_path, method: :delete %>
   <% else %>
     <%= link_to 'New User', new_users_path %>    |
     <%= link_to 'Login', new_sessions_path %>
