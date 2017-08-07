@@ -10,8 +10,8 @@
   <h1>Photogur</h1>
   <%= link_to 'Home', root_url %>     |
 
-  <% if session[:user_id]%>
-    Hello User <%= session[:user_id]%>  |
+  <% if current_user%>
+    Hello <%= current_user.email%>  |
     <%= link_to 'Logout', sessions_path, method: :delete %>
   <% else %>
     <%= link_to 'New User', new_users_path %>    |
