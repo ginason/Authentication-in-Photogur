@@ -8,15 +8,20 @@
 </head>
 <header>
   <h1>Photogur</h1>
-  <%= link_to 'New User', new_users_path %>  |
-  <%= link_to 'Login', root_path %> |
-  <%= link_to 'Logout', root_path %>
+  <%= link_to 'Home', root_url %>     |
+  <% if false%>
+    <%= link_to 'Logout', root_path %>
+  <% else %>
+    <%= link_to 'New User', new_users_path %>    |
+    <%= link_to 'Login', new_sessions_path %>
+  <%end%>
+
 </header>
 <body>
   <% if flash.any?%>
   <% flash.each do |key, value|%>
   <p class ="<%= key %>">
-    <%%>
+    <%= value %>
   </p>
   <%end%>
   <%end%>
